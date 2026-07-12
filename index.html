@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Amanda &amp; Galen · New Orleans · Spring 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20302b;        /* deep forest */
+    --moss:#3c5a4a;
+    --gold:#b08d4f;       /* warm gold */
+    --gold-soft:#c9a862;
+    --cream:#f7f3ea;
+    --paper:#fffdf8;
+    --line:#e4dcc9;
+    --shadow:0 18px 45px -22px rgba(32,48,43,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    font-weight:300;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15}
+  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
+  .eyebrow{
+    font-family:'Jost',sans-serif;font-weight:400;letter-spacing:.32em;
+    text-transform:uppercase;font-size:.72rem;color:var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .hero{
+    background:
+      radial-gradient(120% 100% at 50% 0%, rgba(176,141,79,.14), transparent 60%),
+      linear-gradient(160deg,#22342d 0%,#2f4a3d 55%,#20302b 100%);
+    color:var(--cream);
+    text-align:center;
+    padding:88px 22px 78px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero:after{
+    content:"";position:absolute;left:50%;bottom:34px;transform:translateX(-50%);
+    width:64px;height:1px;background:var(--gold-soft);opacity:.7;
+  }
+  .hero .eyebrow{color:var(--gold-soft)}
+  .hero h1{font-size:clamp(3rem,9vw,5.4rem);margin:.28em 0 .12em;letter-spacing:.01em}
+  .hero .amp{font-style:italic;color:var(--gold-soft);font-weight:400}
+  .hero .sub{font-size:1.05rem;letter-spacing:.06em;opacity:.9;font-weight:300}
+  .hero .meta{margin-top:26px;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;opacity:.8}
+  .hero .meta span{white-space:nowrap}
+  .hero .dot{color:var(--gold-soft);margin:0 .6em}
+
+  /* ---- Sections ---- */
+  section{padding:62px 0}
+  section:nth-of-type(even){background:var(--paper)}
+  .sec-head{text-align:center;margin-bottom:42px}
+  .sec-head h2{font-size:clamp(2rem,5vw,2.9rem);margin-top:.15em}
+  .sec-head p{max-width:600px;margin:14px auto 0;color:var(--moss);font-size:1.02rem}
+
+  .lede{font-size:1.18rem;text-align:center;max-width:680px;margin:0 auto;color:var(--moss)}
+  .lede em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
+
+  /* vision chips */
+  .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
+  .chip{
+    background:var(--cream);border:1px solid var(--line);border-radius:40px;
+    padding:11px 20px;font-size:.9rem;letter-spacing:.02em;color:var(--ink);
+    box-shadow:0 4px 14px -10px rgba(32,48,43,.4);
+  }
+  .chip b{color:var(--gold);font-weight:500}
+
+  /* finalist cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
+  .card{
+    background:var(--paper);border:1px solid var(--line);border-radius:16px;
+    padding:30px 28px;box-shadow:var(--shadow);position:relative;
+  }
+  .card .badge{
+    position:absolute;top:-13px;left:28px;background:var(--gold);color:#fff;
+    font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+    padding:5px 13px;border-radius:20px;font-weight:400;
+  }
+  .card h3{font-size:1.9rem;margin:6px 0 2px}
+  .card .place{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  .card p{font-size:.98rem;color:var(--moss);margin-bottom:16px}
+  .card ul{list-style:none;margin:0 0 18px}
+  .card li{position:relative;padding-left:22px;margin-bottom:9px;font-size:.95rem}
+  .card li:before{content:"✦";position:absolute;left:0;color:var(--gold-soft);font-size:.85rem;top:1px}
+  .price{
+    border-top:1px dashed var(--line);padding-top:15px;margin-top:auto;
+    font-size:.9rem;color:var(--ink);
+  }
+  .price .tag{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:600;display:block;margin-bottom:2px}
+  .price small{color:var(--moss);font-size:.82rem}
+
+  /* experience timeline */
+  .timeline{max-width:720px;margin:0 auto;position:relative}
+  .timeline:before{content:"";position:absolute;left:78px;top:8px;bottom:8px;width:1px;background:var(--line)}
+  .beat{position:relative;padding:0 0 30px 108px}
+  .beat .time{
+    position:absolute;left:0;top:0;width:64px;text-align:right;
+    font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);font-weight:600;line-height:1.3;
+  }
+  .beat:before{content:"";position:absolute;left:74px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--cream)}
+  section:nth-of-type(even) .beat:before{box-shadow:0 0 0 4px var(--paper)}
+  .beat h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;margin-bottom:3px}
+  .beat p{font-size:.96rem;color:var(--moss)}
+
+  /* contenders */
+  .grid-min{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:6px}
+  .mini{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .mini h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:3px}
+  .mini .st{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+  .mini p{font-size:.9rem;color:var(--moss)}
+
+  /* extras */
+  .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
+  .extra{text-align:center;padding:24px 16px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
+  .extra .ic{font-size:1.7rem;margin-bottom:10px}
+  .extra h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:5px}
+  .extra p{font-size:.88rem;color:var(--moss)}
+
+  /* status */
+  .status{max-width:640px;margin:0 auto;text-align:center}
+  .status ul{list-style:none;margin-top:22px;text-align:left;display:inline-block}
+  .status li{padding-left:26px;position:relative;margin-bottom:11px;font-size:.98rem;color:var(--moss)}
+  .status li:before{content:"○";position:absolute;left:0;color:var(--gold);top:0}
+
+  footer{background:#20302b;color:var(--cream);text-align:center;padding:46px 22px}
+  footer .amp{font-style:italic;color:var(--gold-soft)}
+  footer .serif{font-size:1.8rem}
+  footer .fine{margin-top:16px;font-size:.78rem;letter-spacing:.05em;opacity:.6;line-height:1.7}
+
+  @media(max-width:680px){
+    .cards{grid-template-columns:1fr}
+    .extras{grid-template-columns:1fr 1fr}
+    .grid-min{grid-template-columns:1fr}
+    .timeline:before{left:58px}
+    .beat{padding-left:82px}
+    .beat .time{width:48px;font-size:1rem}
+    .beat:before{left:54px}
+    section{padding:50px 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eyebrow">We're getting married</div>
+  <h1>Amanda <span class="amp">&amp;</span> Galen</h1>
+  <div class="sub">New Orleans, Louisiana</div>
+  <div class="meta">
+    <span>Spring 2027</span><span class="dot">·</span><span>~200 guests</span><span class="dot">·</span><span>A proper party</span>
+  </div>
+</header>
+
+<!-- VISION -->
+<section id="vision">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Vision</div>
+      <h2>Not a stuffy dinner — a celebration</h2>
+    </div>
+    <p class="lede">
+      A New Orleans wedding built around the party, not the place cards. Cocktails the moment you arrive,
+      generous food stations so <em>nobody leaves hungry</em>, a full bar, and a live band over a dance floor
+      that stays packed all night — capped by a second line out into the city.
+    </p>
+    <div class="chips">
+      <div class="chip"><b>Cocktail &amp; stations</b> — no seated dinner</div>
+      <div class="chip"><b>Live band</b> + big dance floor</div>
+      <div class="chip"><b>Second line</b> through the streets</div>
+      <div class="chip"><b>Full bar</b>, all night</div>
+      <div class="chip"><b>Full-service planner</b></div>
+      <div class="chip"><b>New Orleans</b>, top to bottom</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINALISTS -->
+<section id="finalists">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Two Finalists</div>
+      <h2>It's come down to these</h2>
+      <p>Both toured, both loved. One is a grand historic hotel in the heart of downtown; the other is a
+         restored 1900s church under a projection-mapped dome. Two very different nights.</p>
+    </div>
+    <div class="cards">
+
+      <div class="card">
+        <div class="badge">Finalist</div>
+        <h3>The Josephine</h3>
+        <div class="place">Uptown · Napoleon Ave</div>
+        <p>A restored early-1900s church reimagined by Dickie Brennan &amp; Co. — a 5,200 sq ft former sanctuary
+           with a soaring dome and open-air courtyards under the oaks. The most photogenic room of anywhere we've seen.</p>
+        <ul>
+          <li>Projection-mapped dome over the dance floor — a true "wow" moment</li>
+          <li>Ceremony outdoors in the string-lit South Courtyard</li>
+          <li>The Grotto (stonework + neon) for photos; a bridal suite above the hall</li>
+          <li>In-house catering, event team &amp; security</li>
+        </ul>
+        <div class="price">
+          <span class="tag">~$40k</span>
+          <small>venue + food + bar for ~200 (Fri, Apr 2 2027 proposal in hand). Roughly $120–130 per guest all-in.</small>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="badge">Finalist</div>
+        <h3>NOPSI Hotel</h3>
+        <div class="place">Central Business District</div>
+        <p>A grand historic hotel downtown with in-house everything and rooftop views. Its superpower: guests are
+           <em>already home</em> — they ride an elevator, not a rideshare, at the end of the night.</p>
+        <ul>
+          <li>Everyone stays on-site — walk-home convenience</li>
+          <li>Second line flows naturally right out into the CBD</li>
+          <li>Hotel provides tables, dance floor, stage &amp; lighting</li>
+          <li>Our contact offered to "match just about anything"</li>
+        </ul>
+        <div class="price">
+          <span class="tag">$145–$225<small> / guest</small></span>
+          <small>reception packages by tier (the richer tiers add hot stations + a late-night snack). Chairs to be swapped — Amanda's call.</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE MAP -->
+<section id="night">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">A Night at The Josephine</div>
+      <h2>How the evening would flow</h2>
+      <p>Picture the whole night, start to finish — the piece that turns a beautiful room into an easy, effortless celebration.</p>
+    </div>
+    <div class="timeline">
+      <div class="beat">
+        <div class="time">Aft.</div>
+        <h4>Gather at the hotel</h4>
+        <p>Out-of-town guests are all blocked in one downtown hotel — a shared basecamp. Meet at the lobby bar,
+           then a chartered shuttle carries everyone to the door. No one hunts for a ride.</p>
+      </div>
+      <div class="beat">
+        <div class="time">6:30</div>
+        <h4>Arrival &amp; the ceremony drink</h4>
+        <p>Guests step off the shuttle onto oak-lined Napoleon Ave into the courtyard. A cocktail is waiting —
+           served from a rented center bar wrapped in a floral "tree," the visual centerpiece of the entrance.</p>
+      </div>
+      <div class="beat">
+        <div class="time">7:00</div>
+        <h4>Ceremony under the towers</h4>
+        <p>Outdoors in the South Courtyard, golden-hour light, ceremony musicians. Intimate and unmistakably New Orleans.</p>
+      </div>
+      <div class="beat">
+        <div class="time">7:30</div>
+        <h4>Cocktail hour in the courtyards</h4>
+        <p>Guests drift between the courtyards and the Grotto (the photo moment) while the main hall is set.
+           Passed bites, the center bar keeps pouring.</p>
+      </div>
+      <div class="beat">
+        <div class="time">8:00</div>
+        <h4>The reveal — the Main Hall</h4>
+        <p>Doors open to the former sanctuary. The dome lights up with projection mapping, the band takes the stage,
+           and the dance floor is front and center. Stations and grazing all night — a party, not a sit-down.</p>
+      </div>
+      <div class="beat">
+        <div class="time">Late</div>
+        <h4>Second line &amp; the ride home</h4>
+        <p>A brass-led second line loops the courtyards for the send-off energy, glow handouts for the finish —
+           then the shuttle loops everyone back to the hotel bar for the after-party.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENDERS -->
+<section id="contenders">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Also In the Mix</div>
+      <h2>The other contenders</h2>
+      <p>Still gathering info on a few — the field beyond the top two.</p>
+    </div>
+    <div class="grid-min">
+      <div class="mini"><h4>Capulet</h4><div class="st">Contender · best value</div><p>Bywater. The most budget-friendly of the serious options — "absolutely a contender if the price is right."</p></div>
+      <div class="mini"><h4>Common House</h4><div class="st">Contender · toured</div><p>420 Julia. Toured and liked; waiting on a full pricing packet and menu.</p></div>
+      <div class="mini"><h4>Hotel Peter &amp; Paul</h4><div class="st">Contender · likely premium</div><p>Marigny. Beautiful — but the sense is it runs expensive. Awaiting a real quote.</p></div>
+      <div class="mini"><h4>Gallery by Pigeon</h4><div class="st">Awaiting menu</div><p>Caterer-model space (no rental fee, food minimum only). Need a real sample menu.</p></div>
+      <div class="mini"><h4>Venusian Garden</h4><div class="st">Touring soon</div><p>New management; expected to be affordable but bring-your-own everything.</p></div>
+      <div class="mini"><h4>… and the rest</h4><div class="st">Ruled out</div><p>A dozen more toured or contacted — too small, too pricey, or just not us.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXTRAS -->
+<section id="extras">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Fun Stuff</div>
+      <h2>Extras we're dreaming up</h2>
+      <p>The touches that make it ours — some locked, some being priced.</p>
+    </div>
+    <div class="extras">
+      <div class="extra"><div class="ic">🍸</div><h4>Ceremony Drink</h4><p>A cocktail in hand before you sit — poured from a floral-wrapped center bar.</p></div>
+      <div class="extra"><div class="ic">✨</div><h4>Projection Mapping</h4><p>The dome (and maybe the altar wall) lit up and moving above the dance floor.</p></div>
+      <div class="extra"><div class="ic">🎺</div><h4>Second Line</h4><p>Brass band, parasols &amp; handkerchiefs — maybe Mardi Gras Indians and pedicabs.</p></div>
+      <div class="extra"><div class="ic">🎪</div><h4>Aerialist</h4><p>An overhead performer, if the room allows the rigging.</p></div>
+      <div class="extra"><div class="ic">💐</div><h4>Florals &amp; Candles</h4><p>Flowers, candlelight and vases throughout — warm and abundant.</p></div>
+      <div class="extra"><div class="ic">🎶</div><h4>Live Band</h4><p>A 7–10 piece band keeping the floor full all night long.</p></div>
+      <div class="extra"><div class="ic">📞</div><h4>Audio Guest Book</h4><p>An old rotary phone — leave a voice message for us to keep.</p></div>
+      <div class="extra"><div class="ic">📸</div><h4>Photo Booth</h4><p>A backdrop and props for the night's silliest photos.</p></div>
+      <div class="extra"><div class="ic">💡</div><h4>Glow Finish</h4><p>Light-up handouts as the night peaks — a rave send-off.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section id="status">
+  <div class="wrap status">
+    <div class="sec-head">
+      <div class="eyebrow">Where Things Stand</div>
+      <h2>Still to decide together</h2>
+    </div>
+    <ul>
+      <li>The venue — Josephine or NOPSI (the big one)</li>
+      <li>The date — targeting a Friday in early April 2027</li>
+      <li>Which NOPSI package tier, or locking Josephine's proposal</li>
+      <li>Band, florals, photographer &amp; the second-line lineup</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="serif">Amanda <span class="amp">&amp;</span> Galen</div>
+  <div style="letter-spacing:.2em;font-size:.8rem;margin-top:6px;opacity:.8">NEW ORLEANS · SPRING 2027</div>
+  <div class="fine">
+    A living plan — this page updates as we lock things in.<br>
+    Made with love (and a little help from Charlie).
+  </div>
+</footer>
+
+</body>
+</html>

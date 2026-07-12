@@ -4,489 +4,514 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Amanda &amp; Galen · New Orleans · Spring 2027</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Galen &amp; Amanda — Wedding Command Center</title>
 <style>
+:root{
+  --paper:#F3F1EA; --card:#FBFAF6; --card-2:#F7F5EE;
+  --ink:#23201C; --ink-soft:#6B655C; --ink-faint:#948D80;
+  --line:#E1DCD0; --line-soft:#EBE7DC;
+  --claret:#7A2E3A; --claret-soft:#F0E1E1;
+  --evergreen:#2F5D4E; --evergreen-soft:#E1EAE3;
+  --brass:#9A6B22; --brass-soft:#F0E6D2;
+  --clay:#9C4A3C; --clay-soft:#EFE0DA;
+  --amber:#8A6A1E;
+  --shadow:0 1px 2px rgba(35,32,28,.05),0 8px 24px rgba(35,32,28,.05);
+  --serif:ui-serif,"New York","Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,ui-sans-serif,"Segoe UI",system-ui,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --rad:14px;
+}
+@media (prefers-color-scheme:dark){
   :root{
-    --ink:#20302b;        /* deep forest */
-    --moss:#3c5a4a;
-    --gold:#b08d4f;       /* warm gold */
-    --gold-soft:#c9a862;
-    --cream:#f7f3ea;
-    --paper:#fffdf8;
-    --line:#e4dcc9;
-    --shadow:0 18px 45px -22px rgba(32,48,43,.45);
+    --paper:#191713; --card:#221F1A; --card-2:#1F1C17;
+    --ink:#ECE7DD; --ink-soft:#A79F91; --ink-faint:#7C7568;
+    --line:#332F28; --line-soft:#2A2621;
+    --claret:#D48A93; --claret-soft:#3A2529;
+    --evergreen:#83B6A1; --evergreen-soft:#20302A;
+    --brass:#CFA05C; --brass-soft:#322A1C;
+    --clay:#D28A7B; --clay-soft:#33221E;
+    --amber:#CDA657;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Jost',system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.65;
-    font-weight:300;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,.serif{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.15}
-  .wrap{max-width:920px;margin:0 auto;padding:0 22px}
-  .eyebrow{
-    font-family:'Jost',sans-serif;font-weight:400;letter-spacing:.32em;
-    text-transform:uppercase;font-size:.72rem;color:var(--gold);
-  }
-
-  /* ---- Hero ---- */
-  .hero{
-    background:
-      radial-gradient(120% 100% at 50% 0%, rgba(176,141,79,.14), transparent 60%),
-      linear-gradient(160deg,#22342d 0%,#2f4a3d 55%,#20302b 100%);
-    color:var(--cream);
-    text-align:center;
-    padding:88px 22px 78px;
-    position:relative;
-    overflow:hidden;
-  }
-  .hero:after{
-    content:"";position:absolute;left:50%;bottom:34px;transform:translateX(-50%);
-    width:64px;height:1px;background:var(--gold-soft);opacity:.7;
-  }
-  .hero .eyebrow{color:var(--gold-soft)}
-  .hero h1{font-size:clamp(3rem,9vw,5.4rem);margin:.28em 0 .12em;letter-spacing:.01em}
-  .hero .amp{font-style:italic;color:var(--gold-soft);font-weight:400}
-  .hero .sub{font-size:1.05rem;letter-spacing:.06em;opacity:.9;font-weight:300}
-  .hero .meta{margin-top:26px;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;opacity:.8}
-  .hero .meta span{white-space:nowrap}
-  .hero .dot{color:var(--gold-soft);margin:0 .6em}
-
-  /* ---- Sections ---- */
-  section{padding:62px 0}
-  section:nth-of-type(even){background:var(--paper)}
-  .sec-head{text-align:center;margin-bottom:42px}
-  .sec-head h2{font-size:clamp(2rem,5vw,2.9rem);margin-top:.15em}
-  .sec-head p{max-width:640px;margin:14px auto 0;color:var(--moss);font-size:1.02rem}
-
-  .lede{font-size:1.18rem;text-align:center;max-width:680px;margin:0 auto;color:var(--moss)}
-  .lede em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
-
-  /* vision chips */
-  .chips{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:36px}
-  .chip{
-    background:var(--cream);border:1px solid var(--line);border-radius:40px;
-    padding:11px 20px;font-size:.9rem;letter-spacing:.02em;color:var(--ink);
-    box-shadow:0 4px 14px -10px rgba(32,48,43,.4);
-  }
-  .chip b{color:var(--gold);font-weight:500}
-
-  /* finalist cards */
-  .cards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
-  .card{
-    background:var(--paper);border:1px solid var(--line);border-radius:16px;
-    padding:30px 28px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;
-  }
-  .card .badge{
-    position:absolute;top:-13px;left:28px;background:var(--gold);color:#fff;
-    font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
-    padding:5px 13px;border-radius:20px;font-weight:400;
-  }
-  .card h3{font-size:1.9rem;margin:6px 0 2px}
-  .card .place{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-  .card p{font-size:.98rem;color:var(--moss);margin-bottom:16px}
-  .card ul{list-style:none;margin:0 0 18px}
-  .card li{position:relative;padding-left:22px;margin-bottom:9px;font-size:.95rem}
-  .card li:before{content:"✦";position:absolute;left:0;color:var(--gold-soft);font-size:.85rem;top:1px}
-  .price{
-    border-top:1px dashed var(--line);padding-top:15px;margin-top:auto;
-    font-size:.9rem;color:var(--ink);
-  }
-  .price .tag{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:600;display:block;margin-bottom:2px}
-  .price small{color:var(--moss);font-size:.82rem;display:block;margin-top:3px}
-
-  /* pricing tables */
-  .ptable{width:100%;border-collapse:collapse;margin-top:6px;font-size:.92rem;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-  .ptable caption{caption-side:top;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink);margin-bottom:10px;font-weight:600}
-  .ptable th,.ptable td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
-  .ptable thead th{background:#efe7d6;color:var(--ink);font-weight:500;letter-spacing:.03em;font-size:.8rem;text-transform:uppercase}
-  .ptable tbody tr:last-child td{border-bottom:none}
-  .ptable td.num,.ptable th.num{text-align:right;white-space:nowrap}
-  .ptable .win{color:var(--gold);font-weight:600}
-  .ptable tr.total td{background:#f3edde;font-weight:500}
-  .ptable .g{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);font-weight:600}
-  .tnote{font-size:.82rem;color:var(--moss);margin-top:10px;line-height:1.55}
-  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-
-  /* callout / lever */
-  .callout{
-    background:linear-gradient(160deg,#24382f,#2f4a3d);color:var(--cream);
-    border-radius:16px;padding:26px 28px;margin-top:30px;box-shadow:var(--shadow);
-  }
-  .callout .eyebrow{color:var(--gold-soft);margin-bottom:8px}
-  .callout h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
-  .callout p{font-size:.98rem;opacity:.92;margin-bottom:10px}
-  .callout p:last-child{margin-bottom:0}
-  .callout b{color:var(--gold-soft);font-weight:500}
-
-  /* experience timeline */
-  .timeline{max-width:720px;margin:0 auto;position:relative}
-  .timeline:before{content:"";position:absolute;left:78px;top:8px;bottom:8px;width:1px;background:var(--line)}
-  .beat{position:relative;padding:0 0 30px 108px}
-  .beat .time{
-    position:absolute;left:0;top:0;width:64px;text-align:right;
-    font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);font-weight:600;line-height:1.3;
-  }
-  .beat:before{content:"";position:absolute;left:74px;top:6px;width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--cream)}
-  section:nth-of-type(even) .beat:before{box-shadow:0 0 0 4px var(--paper)}
-  .beat h4{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;margin-bottom:3px}
-  .beat p{font-size:.96rem;color:var(--moss)}
-
-  /* contenders */
-  .grid-min{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:6px}
-  .mini{background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
-  .mini h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:3px}
-  .mini .st{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
-  .mini p{font-size:.9rem;color:var(--moss)}
-
-  /* extras */
-  .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
-  .extra{text-align:center;padding:24px 16px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
-  .extra .ic{font-size:1.7rem;margin-bottom:10px}
-  .extra h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:5px}
-  .extra .cost{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-  .extra p{font-size:.88rem;color:var(--moss)}
-
-  /* status */
-  .status{max-width:680px;margin:0 auto;text-align:center}
-  .status ul{list-style:none;margin-top:22px;text-align:left;display:inline-block}
-  .status li{padding-left:26px;position:relative;margin-bottom:11px;font-size:.98rem;color:var(--moss)}
-  .status li:before{content:"○";position:absolute;left:0;color:var(--gold);top:0}
-  .status li b{color:var(--ink);font-weight:500}
-
-  footer{background:#20302b;color:var(--cream);text-align:center;padding:46px 22px}
-  footer .amp{font-style:italic;color:var(--gold-soft)}
-  footer .serif{font-size:1.8rem}
-  footer .fine{margin-top:16px;font-size:.78rem;letter-spacing:.05em;opacity:.6;line-height:1.7}
-
-  @media(max-width:680px){
-    .cards{grid-template-columns:1fr}
-    .extras{grid-template-columns:1fr 1fr}
-    .grid-min{grid-template-columns:1fr}
-    .timeline:before{left:58px}
-    .beat{padding-left:82px}
-    .beat .time{width:48px;font-size:1rem}
-    .beat:before{left:54px}
-    section{padding:50px 0}
-    .ptable th,.ptable td{padding:9px 10px;font-size:.86rem}
-  }
+}
+:root[data-theme="light"]{
+  --paper:#F3F1EA;--card:#FBFAF6;--card-2:#F7F5EE;--ink:#23201C;--ink-soft:#6B655C;--ink-faint:#948D80;--line:#E1DCD0;--line-soft:#EBE7DC;--claret:#7A2E3A;--claret-soft:#F0E1E1;--evergreen:#2F5D4E;--evergreen-soft:#E1EAE3;--brass:#9A6B22;--brass-soft:#F0E6D2;--clay:#9C4A3C;--clay-soft:#EFE0DA;--amber:#8A6A1E;--shadow:0 1px 2px rgba(35,32,28,.05),0 8px 24px rgba(35,32,28,.05);
+}
+:root[data-theme="dark"]{
+  --paper:#191713;--card:#221F1A;--card-2:#1F1C17;--ink:#ECE7DD;--ink-soft:#A79F91;--ink-faint:#7C7568;--line:#332F28;--line-soft:#2A2621;--claret:#D48A93;--claret-soft:#3A2529;--evergreen:#83B6A1;--evergreen-soft:#20302A;--brass:#CFA05C;--brass-soft:#322A1C;--clay:#D28A7B;--clay-soft:#33221E;--amber:#CDA657;--shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+.wcc{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;min-height:100vh}
+.wcc-wrap{max-width:920px;margin:0 auto;padding:0 20px}
+.num{font-variant-numeric:tabular-nums}
+h1,h2,h3{font-family:var(--serif);font-weight:500;text-wrap:balance;letter-spacing:-.01em;margin:0}
+a{color:var(--claret);text-underline-offset:2px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint)}
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:920px;margin:0 auto;padding:11px 20px;display:flex;align-items:center;gap:16px}
+.mono-badge{font-family:var(--serif);font-size:17px;letter-spacing:.04em;color:var(--claret);white-space:nowrap}
+.nav-links{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{font-size:13px;color:var(--ink-soft);text-decoration:none;padding:5px 9px;border-radius:8px}
+.nav-links a:hover{background:var(--card-2);color:var(--ink)}
+.tbtn{border:1px solid var(--line);background:var(--card);color:var(--ink-soft);width:32px;height:32px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.tbtn:hover{border-color:var(--ink-faint);color:var(--ink)}
+/* hero */
+.hero{padding:56px 0 34px}
+.hero h1{font-size:clamp(34px,7vw,58px);line-height:1.02}
+.hero .amp{color:var(--claret);font-style:italic}
+.hero-sub{margin-top:18px;font-size:18px;color:var(--ink-soft);max-width:52ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.chip{font-size:13px;padding:6px 12px;border-radius:20px;background:var(--card);border:1px solid var(--line);color:var(--ink-soft);display:inline-flex;gap:7px;align-items:center}
+.chip b{color:var(--ink);font-weight:500}
+.rule{height:1px;background:var(--line);margin:8px 0}
+section{padding:38px 0;border-top:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+.sec-head h2{font-size:26px}
+.sec-head .eyebrow{margin-left:auto}
+.lead{color:var(--ink-soft);max-width:64ch;margin:-8px 0 22px}
+/* decision head-to-head */
+.vs{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:stretch}
+.vs-card{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);padding:20px;box-shadow:var(--shadow)}
+.vs-card h3{font-size:22px;margin-bottom:2px}
+.vs-tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--evergreen)}
+.vs-mid{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink-faint)}
+.vs-line{font-size:14px;color:var(--ink-soft);margin-top:10px;padding-top:10px;border-top:1px solid var(--line-soft)}
+.vs-line b{color:var(--ink);font-weight:500}
+.callout{margin-top:16px;background:var(--claret-soft);border:1px solid color-mix(in srgb,var(--claret) 30%,transparent);border-radius:var(--rad);padding:16px 18px;color:var(--ink)}
+.callout .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--claret);display:block;margin-bottom:5px}
+/* filter */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.fbtn{font-size:12.5px;padding:6px 13px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--ink-soft);cursor:pointer}
+.fbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+/* venue accordion */
+.ven{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);margin-bottom:11px;overflow:hidden;transition:border-color .2s}
+.ven.open{border-color:var(--ink-faint)}
+.ven-h{display:flex;align-items:center;gap:14px;padding:15px 18px;cursor:pointer;width:100%;background:none;border:0;text-align:left;color:inherit;font-family:inherit}
+.ven-h:focus-visible{outline:2px solid var(--claret);outline-offset:-2px}
+.pill{font-size:11px;font-family:var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;flex:none}
+.p-top{background:var(--evergreen-soft);color:var(--evergreen)}
+.p-con{background:var(--brass-soft);color:var(--brass)}
+.p-early{background:var(--card-2);color:var(--ink-faint);border:1px solid var(--line)}
+.ven-name{font-family:var(--serif);font-size:19px;flex:1;min-width:0}
+.ven-price{font-family:var(--mono);font-size:15px;color:var(--ink);white-space:nowrap;text-align:right}
+.ven-price small{display:block;font-size:10.5px;color:var(--ink-faint);letter-spacing:.02em}
+.chev{flex:none;transition:transform .25s;color:var(--ink-faint)}
+.ven.open .chev{transform:rotate(90deg)}
+.ven-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s ease}
+.ven.open .ven-body{grid-template-rows:1fr}
+.ven-inner{overflow:hidden}
+.ven-pad{padding:2px 18px 20px;border-top:1px solid var(--line-soft)}
+.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 26px;margin-top:14px}
+.det h4{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 7px}
+.det ul{margin:0;padding-left:16px}
+.det li{margin:3px 0;font-size:14px;color:var(--ink-soft)}
+.det li b{color:var(--ink);font-weight:500}
+.next{margin-top:15px;font-size:13.5px;background:var(--card-2);border-radius:10px;padding:10px 13px;color:var(--ink)}
+.next span{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--claret);margin-right:8px}
+/* pricing */
+.toggles{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:20px}
+.tog{display:flex;align-items:center;gap:9px}
+.tog .lab{font-size:12px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.seg{display:inline-flex;background:var(--card-2);border:1px solid var(--line);border-radius:9px;padding:2px}
+.seg button{border:0;background:none;font-family:var(--mono);font-size:13px;padding:5px 12px;border-radius:7px;cursor:pointer;color:var(--ink-soft)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.bars{display:flex;flex-direction:column;gap:13px}
+.bar-row{display:grid;grid-template-columns:130px 1fr;gap:14px;align-items:center}
+.bar-lab{font-size:14px;color:var(--ink)}
+.bar-lab small{display:block;font-size:11px;color:var(--ink-faint)}
+.bar-track{position:relative;background:var(--card-2);border-radius:8px;height:34px;overflow:hidden;border:1px solid var(--line-soft)}
+.bar-fill{position:absolute;inset:0 auto 0 0;border-radius:8px;width:0;transition:width .6s cubic-bezier(.22,1,.36,1);background:var(--brass)}
+.bar-fill.top{background:var(--evergreen)}
+.bar-fill.faint{background:repeating-linear-gradient(45deg,var(--line),var(--line) 6px,transparent 6px,transparent 12px)}
+.bar-val{position:absolute;top:0;bottom:0;display:flex;align-items:center;right:12px;font-family:var(--mono);font-size:13px;color:var(--ink);z-index:2}
+.bar-fill.wide + .bar-val{color:var(--paper)}
+/* food table */
+.tscroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--rad)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:13.5px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--line-soft)}
+thead th{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-faint);vertical-align:bottom}
+.col-j{background:var(--claret-soft)}
+th.col-j{color:var(--claret)}
+tbody tr:last-child td{border-bottom:0}
+.rowlab{color:var(--ink);font-weight:500}
+.rowlab small{display:block;font-weight:400;color:var(--ink-faint);font-size:11px}
+.muted{color:var(--ink-faint)}
+.big{font-family:var(--mono);font-size:16px;color:var(--ink)}
+.col-j .big{color:var(--claret)}
+/* extras + todo */
+.ex-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.ex{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.ex .t{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.ex .t b{font-weight:500;font-size:14.5px}
+.ex .pr{font-family:var(--mono);font-size:13px;color:var(--evergreen);white-space:nowrap}
+.ex p{margin:5px 0 0;font-size:12.5px;color:var(--ink-soft)}
+.todo{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.todo h4{font-family:var(--mono);font-weight:400;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 10px}
+.todo ul{list-style:none;margin:0;padding:0}
+.todo li{display:flex;gap:10px;padding:7px 0;font-size:14px;color:var(--ink-soft);border-bottom:1px solid var(--line-soft)}
+.todo li:last-child{border-bottom:0}
+.box{width:16px;height:16px;border:1.5px solid var(--ink-faint);border-radius:5px;flex:none;margin-top:2px}
+.dot{width:16px;height:16px;border-radius:50%;background:var(--claret);flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center}
+.foot{padding:34px 0 60px;color:var(--ink-faint);font-size:12.5px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line)}
+@media (max-width:640px){
+  .vs{grid-template-columns:1fr;gap:10px}.vs-mid{padding:2px}
+  .det-grid,.ex-grid,.todo{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:96px 1fr}
+  .nav-links a:nth-child(n+4){display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
 </style>
 </head>
 <body>
 
+<div class="wcc">
+<nav class="nav"><div class="nav-in">
+  <span class="mono-badge">A &amp; G</span>
+  <div class="nav-links">
+    <a href="#decision">The decision</a>
+    <a href="#venues">Venues</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#food">Food</a>
+    <a href="#extras">Extras</a>
+    <a href="#budget">Budget</a>
+    <a href="#todo">To-do</a>
+  </div>
+  <button class="tbtn" id="themeBtn" aria-label="Toggle light or dark theme" title="Toggle theme">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+  </button>
+</div></nav>
+
+<div class="wcc-wrap">
+
 <header class="hero">
-  <div class="eyebrow">We're getting married</div>
-  <h1>Amanda <span class="amp">&amp;</span> Galen</h1>
-  <div class="sub">New Orleans, Louisiana</div>
-  <div class="meta">
-    <span>Spring 2027</span><span class="dot">·</span><span>~200 guests</span><span class="dot">·</span><span>A proper party</span>
+  <div class="eyebrow">New Orleans &middot; Spring 2027 &middot; ~200 guests</div>
+  <h1>The wedding<span class="amp">,</span> at a glance</h1>
+  <p class="hero-sub">A living command center for Galen &amp; Amanda — where the venue decision stands, what everything costs, and what we're still waiting on.</p>
+  <div class="chips">
+    <span class="chip"><b>Format</b> cocktail &amp; buffet, no seated dinner</span>
+    <span class="chip"><b>Music</b> live band + second line</span>
+    <span class="chip"><b>Planner</b> full-service</span>
+    <span class="chip"><b>Budget</b> value over ceiling</span>
   </div>
 </header>
 
-<!-- VISION -->
-<section id="vision">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">The Vision</div>
-      <h2>Not a stuffy dinner — a celebration</h2>
+<section id="decision" style="border-top:none">
+  <div class="sec-head"><h2>The decision</h2><span class="eyebrow">Top two, head to head</span></div>
+  <p class="lead">It's come down to two. On food and cost, The Josephine wins; on guest convenience, NOPSI's hotel wins. Amanda's tie-breaker is the <em>wow-factor</em> — provided the Josephine guest experience feels seamless.</p>
+  <div class="vs">
+    <div class="vs-card">
+      <div class="vs-tag">Top pick &middot; wow-factor</div>
+      <h3>The Josephine</h3>
+      <div class="muted" style="font-size:14px">Restored 1900s church &middot; Uptown</div>
+      <div class="vs-line"><b>~$37–40k</b> venue + food &amp; bar. Projection-mapped dome, courtyards, richest food per dollar. <b>Not a hotel</b> — solved with an anchor hotel + shuttle.</div>
     </div>
-    <p class="lede">
-      A New Orleans wedding built around the party, not the place cards. Cocktails the moment you arrive,
-      generous food stations so <em>nobody leaves hungry</em>, a full bar, and a live band over a dance floor
-      that stays packed all night — capped by a second line out into the city.
-    </p>
-    <div class="chips">
-      <div class="chip"><b>Cocktail &amp; stations</b> — no seated dinner</div>
-      <div class="chip"><b>Live band</b> + big dance floor</div>
-      <div class="chip"><b>Second line</b> through the streets</div>
-      <div class="chip"><b>Full bar</b>, all night</div>
-      <div class="chip"><b>Full-service planner</b></div>
-      <div class="chip"><b>New Orleans</b>, top to bottom</div>
+    <div class="vs-mid">vs</div>
+    <div class="vs-card">
+      <div class="vs-tag">Top pick &middot; convenience</div>
+      <h3>NOPSI Hotel</h3>
+      <div class="muted" style="font-size:14px">Historic hotel &middot; CBD</div>
+      <div class="vs-line"><b>~$48–74k</b> by package tier. 216 rooms — guests walk home. <b>Tara will price-match</b>, and lighting is hinted free.</div>
     </div>
+  </div>
+  <div class="callout">
+    <span class="k">The move</span>
+    Lock Josephine's proposal in writing, then ask Tara to match it. Because Josephine is ~$126/guest cheaper on food &amp; bar, the match ask is well-founded — and if she matches, NOPSI keeps its hotel edge at Josephine's price.
   </div>
 </section>
 
-<!-- FINALISTS -->
-<section id="finalists">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">The Two Finalists</div>
-      <h2>It's come down to these</h2>
-      <p>Both toured, both loved. One is a grand historic hotel in the heart of downtown; the other is a
-         restored 1900s church under a projection-mapped dome. Two very different nights.</p>
-    </div>
-    <div class="cards">
+<section id="venues">
+  <div class="sec-head"><h2>Venue ledger</h2><span class="eyebrow">Tap any venue to open</span></div>
+  <div class="filters" role="group" aria-label="Filter venues by status">
+    <button class="fbtn" data-f="all" aria-pressed="true">All</button>
+    <button class="fbtn" data-f="top" aria-pressed="false">Top two</button>
+    <button class="fbtn" data-f="con" aria-pressed="false">Contenders</button>
+    <button class="fbtn" data-f="early" aria-pressed="false">Early</button>
+  </div>
+  <div id="venList">
 
-      <div class="card">
-        <div class="badge">Finalist</div>
-        <h3>The Josephine</h3>
-        <div class="place">Uptown · Napoleon Ave</div>
-        <p>A restored early-1900s church reimagined by Dickie Brennan &amp; Co. — a 5,200 sq ft former sanctuary
-           with a soaring dome and open-air courtyards under the oaks. The most photogenic room of anywhere we've seen.</p>
-        <ul>
-          <li>Projection-mapped dome over the dance floor — a true "wow" moment</li>
-          <li>Ceremony outdoors in the string-lit South Courtyard</li>
-          <li>The Grotto (stonework + neon) for photos; a bridal suite above the hall</li>
-          <li>In-house catering, event team &amp; security</li>
-        </ul>
-        <div class="price">
-          <span class="tag">~$37–40k</span>
-          <small>venue + food + bar for ~200. Official proposal in hand: $39,775 build (Fri, Apr 2 2027), 23% service + 10.75% F&amp;B tax, $7k rental / $10k F&amp;B min. Roughly $185–200/guest on venue+F&amp;B.</small>
+    <div class="ven" data-cat="top">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-top">Top two</span>
+        <span class="ven-name">The Josephine</span>
+        <span class="ven-price">~$37–40k<small>venue + F&amp;B, 200</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What's included</h4><ul><li>In-house catering, linens, all furniture</li><li><b>Projection-mapped dome</b> + altar available</li><li>Event manager + security; courtyards for ceremony &amp; cocktail</li><li>Fees: 23% service + 10.75% tax; $7k rental, $10k F&amp;B min</li></ul></div>
+          <div class="det"><h4>Draws &amp; watch-outs</h4><ul><li>Biggest <b>wow-factor</b> of any option</li><li>Richest food per dollar (~$126/guest less than NOPSI Krauss)</li><li><b>Not a hotel</b> → anchor hotel + shuttle plan</li><li>Second line awkward from Uptown; 10 PM end</li></ul></div>
         </div>
-      </div>
+        <div class="next"><span>Next</span>Confirm the Suite for Amanda's prep; design a contained second-line route.</div>
+      </div></div></div>
+    </div>
 
-      <div class="card">
-        <div class="badge">Finalist</div>
-        <h3>NOPSI Hotel</h3>
-        <div class="place">Central Business District</div>
-        <p>A grand historic hotel downtown with in-house everything and rooftop views. Its superpower: guests are
-           <em>already home</em> — they ride an elevator, not a rideshare, at the end of the night.</p>
-        <ul>
-          <li>Everyone stays on-site — walk-home convenience (216 rooms)</li>
-          <li>Second line flows naturally right out into the CBD</li>
-          <li>Hotel provides tables, dance floor, stage &amp; lighting (lighting hinted free)</li>
-          <li>Tara (our contact) offered to "match just about anything"</li>
-        </ul>
-        <div class="price">
-          <span class="tag">~$48k <small style="display:inline;font-size:.82rem">base proposal (220)</small></span>
-          <small>Actual quote on the table: $48,168 for 220, tax incl., 3-hr open bar — the <b>lightest</b> food tier. Stepping up to Krauss ($182/pp) → ~$62k or Maison Blanche ($225/pp) → ~$74k is the real swing. Amanda's chair swap on top.</small>
+    <div class="ven" data-cat="top">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-top">Top two</span>
+        <span class="ven-name">NOPSI Hotel</span>
+        <span class="ven-price">~$48–74k<small>by package tier, 200–220</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What's included</h4><ul><li>Hotel: <b>216 rooms</b>, comp couple + parent suites, room block</li><li>Dance floor + stage; lighting hinted <b>free</b>; colored linens</li><li>Onsite specialist, cake cutting, tasting</li><li>Fees: 24% service + 10% event fee + 10.75% tax</li></ul></div>
+          <div class="det"><h4>Draws &amp; watch-outs</h4><ul><li>Guests <b>stay on-site &amp; walk home</b>; weather-proof</li><li><b>Tara will price-match</b>; flexible end time</li><li>Amanda dislikes the chairs → bring chairs</li><li>Ballroom must flip; least architecturally distinctive</li></ul></div>
         </div>
-      </div>
-
+        <div class="next"><span>Tiers</span>Base ~$48k (light food) &middot; Krauss ~$62k (the fit) &middot; Maison ~$74k (nobody leaves hungry). Decide Krauss vs Maison, then price-match.</div>
+      </div></div></div>
     </div>
 
-    <div class="callout">
-      <div class="eyebrow">The negotiation lever</div>
-      <h3>NOPSI can very plausibly land near Josephine's number</h3>
-      <p>NOPSI's base proposal already lands it within <b>~$8–12k of Josephine</b>, not the $22–34k above that the first model assumed. And on top of that, <b>Tara said she'd match nearly anything.</b></p>
-      <p>The play: pick the package tier we actually want (likely <b>Krauss</b>, for "nobody leaves hungry"), get Josephine's number in writing, then ask Tara to match it. If she does, NOPSI drops toward ~$117k all-in while keeping the hotel/convenience edge.</p>
+    <div class="ven" data-cat="con">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-con">Contender</span>
+        <span class="ven-name">Capulet</span>
+        <span class="ven-price">~$23–26k<small>venue + F&amp;B, 200</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What's included</h4><ul><li>Full-building buyout: Roof Deck, Dining Room, Mezzanine, Suite</li><li>On-site manager, security, all furniture</li><li><b>Tax-inclusive</b> estimates; 11 PM end (latest of the group)</li></ul></div>
+          <div class="det"><h4>Draws &amp; watch-outs</h4><ul><li>Lowest venue + F&amp;B on the board</li><li>Bywater → second line flows naturally</li><li>Catering quoted at base $38/hd — <b>will rise</b> with menu</li><li>Not a hotel; capacity caps at 250</li></ul></div>
+        </div>
+        <div class="next"><span>Next</span>Get real menu pricing above the $38/head base. "Contender if the price is right."</div>
+      </div></div></div>
     </div>
+
+    <div class="ven" data-cat="con">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-con">Contender</span>
+        <span class="ven-name">Hotel Peter &amp; Paul</span>
+        <span class="ven-price">~$67k<small>venue + F&amp;B, 200</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What's included</h4><ul><li>Restored 1861 church; <b>71 rooms on-site</b> (walk home)</li><li>Bacchanal catering; Piazza cocktail hour w/ oyster shuckers</li><li>Baby grand, Chiavari chairs, architectural lighting</li></ul></div>
+          <div class="det"><h4>Draws &amp; watch-outs</h4><ul><li>Most distinctive room after Josephine</li><li><b>85 dB cap vs a live band</b> — possible dealbreaker</li><li>10 PM end; tent contingency likely; sense it's expensive</li></ul></div>
+        </div>
+        <div class="next"><span>Next</span>Get a real all-in quote and ask the 85 dB band question before falling for the church.</div>
+      </div></div></div>
+    </div>
+
+    <div class="ven" data-cat="con">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-con">Contender</span>
+        <span class="ven-name">Common House / 420 Julia</span>
+        <span class="ven-price">TBD<small>need packet</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What we know</h4><ul><li>Toured; have the guidelines/fees doc only</li><li>Ceremony $1.5–2k; security required &gt;200 guests</li><li>CH-approved planner required; $1M event insurance</li></ul></div>
+          <div class="det"><h4>Watch-outs</h4><ul><li>Ceremony spaces seat <b>up to 175</b> vs our ~200</li><li>Courtyard 9 PM sound cutoff</li><li>No per-head food pricing yet</li></ul></div>
+        </div>
+        <div class="next"><span>Next</span>Get the full pricing packet and confirm the room holds 200.</div>
+      </div></div></div>
+    </div>
+
+    <div class="ven" data-cat="early">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-early">Early</span>
+        <span class="ven-name">Gallery by Pigeon</span>
+        <span class="ven-price">~$88/gt<small>placeholder, no menu yet</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What we know</h4><ul><li>Caterer model: <b>no rental</b>, just an F&amp;B minimum</li><li>Venue is "okay"; $88/pp is a placeholder guess</li></ul></div>
+          <div class="det"><h4>Watch-outs</h4><ul><li>Can't evaluate without a real menu + pricing</li><li>Unknown what's included vs BYO</li></ul></div>
+        </div>
+        <div class="next"><span>Next</span>Get the sample menu with actual per-person pricing.</div>
+      </div></div></div>
+    </div>
+
+    <div class="ven" data-cat="early">
+      <button class="ven-h" aria-expanded="false">
+        <span class="pill p-early">Early</span>
+        <span class="ven-name">Venusian Garden</span>
+        <span class="ven-price">TBD<small>touring 7/12</small></span>
+        <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="ven-body"><div class="ven-inner"><div class="ven-pad">
+        <div class="det-grid">
+          <div class="det"><h4>What we know</h4><ul><li>Dormant ~2 years; under new management</li><li>Tour is to meet the new manager</li></ul></div>
+          <div class="det"><h4>Expectation</h4><ul><li>Likely <b>cheap</b>, but <b>bring in all our own vendors</b></li><li>Hidden costs in the BYO model</li></ul></div>
+        </div>
+        <div class="next"><span>Next</span>Tour tomorrow — capture rental, capacity, rain plan, end time, availability.</div>
+      </div></div></div>
+    </div>
+
   </div>
 </section>
 
-<!-- THE NUMBERS -->
-<section id="numbers">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">The Real Numbers</div>
-      <h2>What it actually costs</h2>
-      <p>No hard budget ceiling — we're optimizing for experience and value. These are decision-grade estimates
-         (±5–10%), not final quotes. ✅ = from a real proposal · modeled figures noted.</p>
-    </div>
-
-    <div class="scroll">
-      <table class="ptable">
-        <caption>Venue + food + bar, all-in (ceremony + ~4-hr reception, ~200 guests)</caption>
-        <thead>
-          <tr><th>Venue</th><th class="num">~200 guests</th><th>Firm?</th><th>Notes</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><b>Capulet</b> (Fri, Standard)</td><td class="num win">~$23–26k</td><td>✅</td><td>Lowest. Base menu $38/hd — real menu likely $45–60/hd.</td></tr>
-          <tr><td><b>The Josephine</b> (Fri)</td><td class="num win">~$37–40k</td><td>✅</td><td>Proposal $39,775 + ceremony drink + dome projection.</td></tr>
-          <tr><td><b>NOPSI</b> — base (actual proposal)</td><td class="num">~$44–48k</td><td>✅</td><td>Real quote (220 ppl, 3-hr bar, tax incl.). Lightest food tier.</td></tr>
-          <tr><td><b>NOPSI</b> — Krauss $182 (modeled)</td><td class="num">~$62k</td><td>~</td><td>Upgraded for "nobody leaves hungry." + chair swap.</td></tr>
-          <tr><td><b>NOPSI</b> — Maison Blanche $225 (modeled)</td><td class="num">~$74k</td><td>~</td><td>Richest tier — but treat as negotiable (Tara).</td></tr>
-          <tr><td><b>Hotel Peter &amp; Paul</b> (Fri)</td><td class="num">~$67k</td><td>—</td><td>Confirms "expensive." 85 dB cap may gate a live band.</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tnote">Venue figures cover venue + food + bar + venue-specific essentials only (ceremony drink, Josephine projection, NOPSI chair swap). Shared vendors are a separate block below.</p>
-
-    <div class="scroll" style="margin-top:34px">
-      <table class="ptable">
-        <caption>Shared vendors &amp; enhancements (roughly the same at any venue)</caption>
-        <thead><tr><th>Item</th><th class="num">Estimate</th><th>Notes</th></tr></thead>
-        <tbody>
-          <tr><td>Full-service planner</td><td class="num">$12,000</td><td>Locked</td></tr>
-          <tr><td>Florals / candles / vases</td><td class="num">$10,000</td><td>Amanda's list (range $7.5–12k)</td></tr>
-          <tr><td>Live band (7–10 pc)</td><td class="num">$9,000</td><td>Brings own sound</td></tr>
-          <tr><td>Photography + video</td><td class="num">$8,500</td><td>Venue "complimentary photo" = permission only</td></tr>
-          <tr><td>Attire (both + alterations)</td><td class="num">$6,000</td><td>Set by us</td></tr>
-          <tr><td>Rehearsal dinner (~50)</td><td class="num">$5,000</td><td></td></tr>
-          <tr><td>Second line (base → loaded)</td><td class="num">$3.2–8k</td><td>Priced many ways below</td></tr>
-          <tr><td>Welcome gathering</td><td class="num">$3,000</td><td>Travel-heavy crowd</td></tr>
-          <tr><td>Hair &amp; makeup</td><td class="num">$2,500</td><td></td></tr>
-          <tr><td>Transport / shuttle / valet</td><td class="num">$1.5–3k</td><td>Higher at Josephine (guest shuttle)</td></tr>
-          <tr><td>Ceremony musicians</td><td class="num">$1,200</td><td></td></tr>
-          <tr><td>Wedding cake</td><td class="num">$1,200</td><td></td></tr>
-          <tr><td>Stationery</td><td class="num">$1,800</td><td></td></tr>
-          <tr><td>Aerialist</td><td class="num">~$1,000</td><td>If the room allows rigging</td></tr>
-          <tr><td>Voice/audio guest book</td><td class="num">~$600</td><td>Rotary phone</td></tr>
-          <tr><td>Officiant</td><td class="num">$600</td><td></td></tr>
-          <tr><td>Glow / light-up giveaways</td><td class="num">~$500</td><td>End-of-night finish</td></tr>
-          <tr><td>Photo booth</td><td class="num">$0–1,000</td><td>Likely covered by Galen's firm</td></tr>
-          <tr><td>Meals + insurance + gratuities + buffer</td><td class="num">~$6,450</td><td></td></tr>
-          <tr class="total"><td><b>Shared block subtotal</b></td><td class="num g">~$74–85k</td><td>Roughly venue-independent</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="scroll" style="margin-top:34px">
-      <table class="ptable">
-        <caption>Illustrative grand totals (venue + ~$75k shared block, 200 guests)</caption>
-        <thead><tr><th>Venue</th><th class="num">Venue + F&amp;B</th><th class="num">+ Shared</th><th class="num">Grand total</th></tr></thead>
-        <tbody>
-          <tr><td><b>Capulet</b> (Fri)</td><td class="num">~$25k</td><td class="num">~$75k</td><td class="num g">~$100k</td></tr>
-          <tr><td><b>The Josephine</b> (Fri)</td><td class="num">~$40k</td><td class="num">~$77k</td><td class="num g">~$117k</td></tr>
-          <tr><td><b>NOPSI</b> — base (proposal, 220)</td><td class="num">~$48k</td><td class="num">~$73k</td><td class="num g">~$121k</td></tr>
-          <tr><td><b>NOPSI</b> — Krauss (modeled)</td><td class="num">~$62k</td><td class="num">~$73k</td><td class="num g">~$135k</td></tr>
-          <tr><td><b>Peter &amp; Paul</b> (Fri)</td><td class="num">~$67k</td><td class="num">~$75k</td><td class="num g">~$142k</td></tr>
-          <tr><td><b>NOPSI</b> — Maison (modeled)</td><td class="num">~$74k</td><td class="num">~$73k</td><td class="num g">~$147k</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tnote">Josephine's shared block runs slightly higher (guest shuttle to solve the off-site problem) and its second line is geographically awkward from Uptown. If Tara price-matches, NOPSI drops toward Josephine's ~$117k while keeping the hotel advantage — which is why these two are the finalists.</p>
+<section id="pricing">
+  <div class="sec-head"><h2>What it costs</h2><span class="eyebrow">Venue + food &amp; bar</span></div>
+  <div class="toggles">
+    <div class="tog"><span class="lab">Guests</span><div class="seg" id="segGuests"><button data-g="200" aria-pressed="true">200</button><button data-g="220" aria-pressed="false">220</button></div></div>
+    <div class="tog"><span class="lab">Scope</span><div class="seg" id="segScope"><button data-s="fb" aria-pressed="true">Venue + F&amp;B</button><button data-s="all" aria-pressed="false">Estimated all-in</button></div></div>
   </div>
+  <div class="bars" id="bars"></div>
+  <p class="lead" style="margin-top:20px;margin-bottom:0" id="priceNote">All-in adds roughly $75k of shared vendors (band, planner, florals, photo, second line, enhancements) on top of any venue. NOPSI shown at the Krauss tier; base runs lower, Maison higher.</p>
 </section>
 
-<!-- EXPERIENCE MAP -->
-<section id="night">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">A Night at The Josephine</div>
-      <h2>How the evening would flow</h2>
-      <p>The Josephine's one open question is that it isn't attached to a hotel. The fix: block one anchor hotel
-         downtown and run a shuttle loop — so guests gather at a bar, ride to a stunning church, and ride home. Here's the whole night.</p>
-    </div>
-    <div class="timeline">
-      <div class="beat">
-        <div class="time">Aft.</div>
-        <h4>Gather at the hotel</h4>
-        <p>Out-of-town guests are all blocked in one downtown hotel — a shared basecamp. Meet at the lobby bar,
-           then a chartered shuttle carries everyone to the door. No one hunts for a ride. Amanda preps in the Josephine Suite <em>(confirming availability)</em>.</p>
-      </div>
-      <div class="beat">
-        <div class="time">6:30</div>
-        <h4>Arrival &amp; the ceremony drink</h4>
-        <p>Guests step off the shuttle onto oak-lined Napoleon Ave into the South Courtyard. A cocktail is waiting —
-           served from a rented center bar wrapped in a floral "tree," the visual centerpiece of the entrance.</p>
-      </div>
-      <div class="beat">
-        <div class="time">7:00</div>
-        <h4>Ceremony under the towers</h4>
-        <p>Outdoors in the South Courtyard, golden-hour light, ceremony musicians. Intimate and unmistakably New Orleans.</p>
-      </div>
-      <div class="beat">
-        <div class="time">7:30</div>
-        <h4>Cocktail hour in the courtyards</h4>
-        <p>Guests drift between the courtyards and the Grotto (the photo moment) while the main hall is set.
-           Passed bites, the center bar keeps pouring.</p>
-      </div>
-      <div class="beat">
-        <div class="time">8:00</div>
-        <h4>The reveal — the Main Hall</h4>
-        <p>Doors open to the former sanctuary. The dome lights up with projection mapping, the band takes the stage,
-           and the dance floor is front and center. Stations and grazing all night — a party, not a sit-down (only ~30–40% seated).</p>
-      </div>
-      <div class="beat">
-        <div class="time">Late</div>
-        <h4>Second line &amp; the ride home</h4>
-        <p>A brass-led second line — from Uptown it's a <em>contained</em> loop around the courtyards/block rather than a
-           neighborhood parade — glow handouts for the finish, then the shuttle loops everyone back to the hotel bar for the after-party.</p>
-      </div>
-    </div>
-  </div>
+<section id="food">
+  <div class="sec-head"><h2>What guests eat</h2><span class="eyebrow">Josephine vs NOPSI tiers</span></div>
+  <p class="lead">NOPSI's per-head bundles the bar; Josephine's $59 is food only. Normalized to food + bar per guest, Josephine's proposed Menu II lands between Krauss and Maison — for far less.</p>
+  <div class="tscroll"><table>
+    <thead><tr>
+      <th>Guest gets</th><th class="col-j">Josephine<br>Menu II</th><th>NOPSI<br>Base</th><th>Saenger</th><th>Krauss</th><th>Maison</th>
+    </tr></thead>
+    <tbody>
+      <tr><td class="rowlab">Passed bites</td><td class="col-j">4</td><td>4</td><td>5</td><td>5</td><td>6</td></tr>
+      <tr><td class="rowlab">Grazing / displays</td><td class="col-j">charcuterie &amp; cheese</td><td>2</td><td>2 + crudité</td><td>3</td><td>2 + charcuterie</td></tr>
+      <tr><td class="rowlab">Soup / salad</td><td class="col-j">2 options</td><td class="muted">—</td><td class="muted">—</td><td>1</td><td>1</td></tr>
+      <tr><td class="rowlab">Hot / action stations<small>the substantial food</small></td><td class="col-j"><b>2 entrées</b></td><td>1</td><td>1</td><td>1</td><td><b>2</b></td></tr>
+      <tr><td class="rowlab">Carving / premium</td><td class="col-j"><b>2 features</b></td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td class="rowlab">Late-night bite</td><td class="col-j muted">add-on</td><td class="muted">—</td><td class="muted">—</td><td class="muted">—</td><td>yes</td></tr>
+      <tr><td class="rowlab">Bar in this price?</td><td class="col-j">food only</td><td>3 hr</td><td>3 hr</td><td>3 hr</td><td>3 hr</td></tr>
+      <tr><td class="rowlab">All-in / guest<small>food + bar</small></td><td class="col-j"><span class="big">~$144</span></td><td><span class="big">~$215</span></td><td><span class="big">~$240</span></td><td><span class="big">~$270</span></td><td><span class="big">~$334</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead" style="margin:16px 0 0">Josephine's higher-tier food + a <b>4-hour</b> premium bar comes in below even NOPSI's lightest package. NOPSI's premium buys the hotel — not more food.</p>
 </section>
 
-<!-- CONTENDERS -->
-<section id="contenders">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Also In the Mix</div>
-      <h2>The other contenders</h2>
-      <p>The field beyond the top two — some still gathering info, some already ruled out.</p>
-    </div>
-    <div class="grid-min">
-      <div class="mini"><h4>Capulet</h4><div class="st">Contender · best value (~$25k)</div><p>Bywater. Lowest venue+F&amp;B of the serious options — "absolutely a contender if the price is right," but not top two.</p></div>
-      <div class="mini"><h4>Common House</h4><div class="st">Contender · toured</div><p>420 Julia. Toured and liked; waiting on a full pricing packet and menu. 175-seat ceremony cap vs our 200.</p></div>
-      <div class="mini"><h4>Hotel Peter &amp; Paul</h4><div class="st">Contender · ~$142k, likely gated</div><p>Marigny. Beautiful — but expensive, and an 85 dB sound cap + hard 10 PM stop may not fit a live band + second line.</p></div>
-      <div class="mini"><h4>Gallery by Pigeon</h4><div class="st">Awaiting menu</div><p>Caterer-model space (no rental fee, food minimum only). $88/pp placeholder; need a real sample menu.</p></div>
-      <div class="mini"><h4>Venusian Garden</h4><div class="st">Touring 7/12</div><p>New management; expected cheap but bring-your-own everything (catering, bar, rentals) → hidden costs.</p></div>
-      <div class="mini"><h4>… and the rest</h4><div class="st">Out or silent</div><p>Treme Market Branch, NOMA, Pontchartrain, Chicory, Il Mercato ruled out; The Mint, Ogden, Elms, Civic, Orpheum, Marigny Opera House never replied.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- EXTRAS -->
 <section id="extras">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">The Fun Stuff</div>
-      <h2>Extras we're dreaming up</h2>
-      <p>The touches that make it ours — with rough numbers to refine against real quotes.</p>
+  <div class="sec-head"><h2>The extras</h2><span class="eyebrow">Wishlist &middot; estimates to firm up</span></div>
+  <div class="ex-grid">
+    <div class="ex"><div class="t"><b>Ceremony drink</b><span class="pr">$3.50–6/gt</span></div><p>Drinks served at the ceremony. At Josephine, a rented center bar with a floral tree.</p></div>
+    <div class="ex"><div class="t"><b>Projection mapping</b><span class="pr">$1.2–2.7k</span></div><p>Dome and/or altar wall at Josephine. Definitely in.</p></div>
+    <div class="ex"><div class="t"><b>Second line</b><span class="pr">$2.5–8k</span></div><p>Base parade, or loaded with Mardi Gras Indians, pedicabs for elders, and a glow-stick finish.</p></div>
+    <div class="ex"><div class="t"><b>Florals, candles, vases</b><span class="pr">$7.5–12k</span></div><p>Amanda's direction; scaled to a mostly-standing room.</p></div>
+    <div class="ex"><div class="t"><b>Glitter bar</b><span class="pr">$0.5–1.2k</span></div><p>Amanda's ask — a glam / glitter station for the girls.</p></div>
+    <div class="ex"><div class="t"><b>Aerialist</b><span class="pr">$0.75–2k</span></div><p>Amanda's interested; venue must allow rigging.</p></div>
+    <div class="ex"><div class="t"><b>Photo booth</b><span class="pr">$0–1k</span></div><p>Likely covered — the law firm probably owns one.</p></div>
+    <div class="ex"><div class="t"><b>Voice guest book</b><span class="pr">$450–750</span></div><p>Rotary phone for guest messages. Needs a quiet corner.</p></div>
+    <div class="ex"><div class="t"><b>Dance floor</b><span class="pr">$1.5–3.5k</span></div><p>Rented where the venue lacks one (NOPSI includes one).</p></div>
+  </div>
+</section>
+
+<section id="budget">
+  <div class="sec-head"><h2>Full budget &amp; vendors</h2><span class="eyebrow">Everything, on top of the venue</span></div>
+  <p class="lead">The complete line-item list — from save-the-dates to the honeymoon — lives in the tracker, each with an estimate and a slot for the real vendor once proposals arrive. Ranges below are placeholders to firm up. <b>Status:</b> <span style="color:var(--evergreen)">&#9679; in</span> &nbsp; <span style="color:var(--brass)">&#9679; considering</span> &nbsp; <span style="color:var(--ink-faint)">&#9679; assumed core</span></p>
+  <div class="tscroll"><table>
+    <thead><tr><th>Category</th><th>Estimate</th><th>Highlights</th></tr></thead>
+    <tbody>
+      <tr><td class="rowlab">Planning &amp; admin</td><td class="num">$15–20k</td><td class="muted"><span style="color:var(--evergreen)">planner</span>, insurance, gratuities, buffer, license</td></tr>
+      <tr><td class="rowlab">Attire &amp; beauty</td><td class="num">$6–15k</td><td class="muted">dress + alterations, suit, HMU, party attire</td></tr>
+      <tr><td class="rowlab">Rings</td><td class="num">$1–6k+</td><td class="muted">wedding bands (both)</td></tr>
+      <tr><td class="rowlab">Ceremony</td><td class="num">$2–3k</td><td class="muted"><span style="color:var(--evergreen)">musicians, ceremony drink</span>, officiant</td></tr>
+      <tr><td class="rowlab">Music &amp; entertainment</td><td class="num">$13–22k</td><td class="muted"><span style="color:var(--evergreen)">band, second line, glitter bar, glow, aerialist, photo booth</span>; <span style="color:var(--brass)">dance floor</span></td></tr>
+      <tr><td class="rowlab">Photo &amp; video</td><td class="num">$8–13k</td><td class="muted"><span style="color:var(--evergreen)">photographer, video, content creator</span></td></tr>
+      <tr><td class="rowlab">Florals &amp; decor</td><td class="num">$12–20k</td><td class="muted"><span style="color:var(--evergreen)">florals, projections, neon sign, draping, lounge furniture</span>, signage</td></tr>
+      <tr><td class="rowlab">Stationery</td><td class="num">$2–4k</td><td class="muted">save-the-dates, invites, day-of, thank-yous</td></tr>
+      <tr><td class="rowlab">Cake &amp; desserts</td><td class="num">$1.5–3k</td><td class="muted"><span style="color:var(--evergreen)">cake, specialty dessert</span></td></tr>
+      <tr><td class="rowlab">Guest experience</td><td class="num">$4–9k</td><td class="muted"><span style="color:var(--evergreen)">welcome bags, favors, voice + traditional guest book, late-night pizzas</span>; <span style="color:var(--brass)">shuttle</span></td></tr>
+      <tr><td class="rowlab">Surrounding events</td><td class="num">$9–13k</td><td class="muted"><span style="color:var(--evergreen)">rehearsal dinner, welcome party, brunch</span> &middot; after-party = a bar ($0)</td></tr>
+      <tr><td class="rowlab">Transport</td><td class="num">$2–4k</td><td class="muted"><span style="color:var(--evergreen)">getaway car</span>; <span style="color:var(--brass)">guest shuttle</span> &middot; honeymoon tracked separately</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead" style="margin:16px 0 0">With the scope now decided, the non-venue total lands ~<b>$70–100k</b> — then add the chosen venue (~$25–74k) for the all-in.</p>
+</section>
+
+<section id="todo">
+  <div class="sec-head"><h2>Where things move next</h2><span class="eyebrow">Live</span></div>
+  <div class="todo">
+    <div>
+      <h4>Waiting on</h4>
+      <ul>
+        <li><span class="box"></span>Peter &amp; Paul — real all-in quote</li>
+        <li><span class="box"></span>Gallery by Pigeon — sample menu + pricing</li>
+        <li><span class="box"></span>Venusian Garden — tour 7/12, capture numbers</li>
+        <li><span class="box"></span>Common House — full pricing packet</li>
+        <li><span class="box"></span>Capulet — real menu pricing above base</li>
+        <li><span class="box"></span>NOPSI — will Tara match? + Krauss vs Maison</li>
+      </ul>
     </div>
-    <div class="extras">
-      <div class="extra"><div class="ic">🍸</div><h4>Ceremony Drink</h4><div class="cost">$3.50–6/guest + ~$1.5k bar</div><p>A cocktail in hand before you sit — poured from a floral-wrapped center bar.</p></div>
-      <div class="extra"><div class="ic">✨</div><h4>Projection Mapping</h4><div class="cost">Dome ~$1.2k · altar +$1.5k</div><p>The dome (and maybe the altar wall) lit up and moving above the dance floor.</p></div>
-      <div class="extra"><div class="ic">🎺</div><h4>Second Line</h4><div class="cost">~$3.2k → $6–8k loaded</div><p>Brass band, parasols &amp; handkerchiefs — maybe Mardi Gras Indians and pedicabs.</p></div>
-      <div class="extra"><div class="ic">🎪</div><h4>Aerialist</h4><div class="cost">~$750–2,000</div><p>An overhead performer, if the room allows the rigging.</p></div>
-      <div class="extra"><div class="ic">💐</div><h4>Florals &amp; Candles</h4><div class="cost">~$7.5–12k</div><p>Flowers, candlelight and vases throughout — warm and abundant.</p></div>
-      <div class="extra"><div class="ic">🎶</div><h4>Live Band</h4><div class="cost">~$9,000</div><p>A 7–10 piece band keeping the floor full all night long.</p></div>
-      <div class="extra"><div class="ic">📞</div><h4>Audio Guest Book</h4><div class="cost">~$450–750</div><p>An old rotary phone — leave a voice message for us to keep.</p></div>
-      <div class="extra"><div class="ic">📸</div><h4>Photo Booth</h4><div class="cost">$0–1,200 (firm's?)</div><p>A backdrop and props for the night's silliest photos.</p></div>
-      <div class="extra"><div class="ic">💡</div><h4>Glow Finish</h4><div class="cost">$1–5/guest</div><p>Light-up handouts as the night peaks — a rave send-off.</p></div>
+    <div>
+      <h4>Next actions</h4>
+      <ul>
+        <li><span class="dot"></span>Confirm Josephine's proposal in writing</li>
+        <li><span class="dot"></span>Draft the "match this" ask to Tara</li>
+        <li><span class="dot"></span>Tour Venusian Garden tomorrow</li>
+        <li><span class="dot"></span>Decide Krauss vs Maison; price the chair swap</li>
+        <li><span class="dot"></span>Chase P&amp;P quote &amp; Gallery menu</li>
+        <li><span class="dot"></span>Start real quotes on the extras</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- SECOND LINE MENU -->
-<section id="secondline">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Build-Your-Own</div>
-      <h2>The second line, priced every way</h2>
-      <p>A base parade plus stackable add-ons, so we can see the full range before we pick.</p>
-    </div>
-    <div class="scroll">
-      <table class="ptable">
-        <thead><tr><th>Component</th><th class="num">Rough cost</th></tr></thead>
-        <tbody>
-          <tr><td>Base: permit (~$200) + NOPD escort (~$400–700) + walking brass band ($1,500–3,000) + parasols/handkerchiefs</td><td class="num">~$2.5–4k</td></tr>
-          <tr><td>+ Mardi Gras Indians appearance</td><td class="num">~$1,000–3,000+</td></tr>
-          <tr><td>+ Pedicabs for elderly guests</td><td class="num">~$300–800</td></tr>
-          <tr><td>+ Glow / light-up handouts</td><td class="num">~$200–1,000</td></tr>
-          <tr><td>+ Extra fun (dancers, bigger band, second brass band)</td><td class="num">variable</td></tr>
-          <tr class="total"><td><b>Range</b></td><td class="num g">lean ~$2.5k → loaded ~$6–8k+</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tnote">Flows naturally from CBD (NOPSI) / Marigny / Bywater; awkward from Uptown (Josephine) → a contained-loop version, factored into the experience map above.</p>
-  </div>
-</section>
-
-<!-- STATUS -->
-<section id="status">
-  <div class="wrap status">
-    <div class="sec-head">
-      <div class="eyebrow">Where Things Stand</div>
-      <h2>Still to decide together</h2>
-    </div>
-    <ul>
-      <li><b>The venue</b> — Josephine or NOPSI (the big one)</li>
-      <li><b>The date</b> — Josephine's proposal is dated Fri Apr 2, 2027; confirm the real target (P&amp;P Apr 16 · NOPSI Apr 17 also floated)</li>
-      <li><b>NOPSI package tier</b> — likely Krauss ($182) — then have Tara match Josephine's number</li>
-      <li><b>Josephine details</b> — confirm the $5k Friday rental rate in writing + the Suite for Amanda's prep</li>
-      <li><b>Band, florals, photographer</b> &amp; the second-line lineup</li>
-      <li><b>Still pricing</b> — Peter &amp; Paul real quote, Gallery by Pigeon menu, Venusian Garden tour (7/12), Capulet's real menu</li>
-    </ul>
-  </div>
-</section>
-
-<footer>
-  <div class="serif">Amanda <span class="amp">&amp;</span> Galen</div>
-  <div style="letter-spacing:.2em;font-size:.8rem;margin-top:6px;opacity:.8">NEW ORLEANS · SPRING 2027</div>
-  <div class="fine">
-    A living plan — this page updates as we lock things in.<br>
-    Made with love (and a little help from Charlie).
-  </div>
+<footer class="foot">
+  <span>Updated 11 Jul 2026 &middot; maintained for Galen &amp; Amanda</span>
+  <span>Estimates are decision-grade, not final quotes.</span>
 </footer>
+</div>
+</div>
 
-</body>
+<script>
+(function(){
+  var root=document.documentElement;
+  var tbtn=document.getElementById('themeBtn');
+  tbtn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';}
+    root.setAttribute('data-theme',cur==='dark'?'light':'dark');
+  });
+  document.querySelectorAll('.ven-h').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.parentElement,open=v.classList.toggle('open');
+      b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+  var fbtns=document.querySelectorAll('.fbtn');
+  fbtns.forEach(function(b){b.addEventListener('click',function(){
+    fbtns.forEach(function(x){x.setAttribute('aria-pressed','false');});
+    b.setAttribute('aria-pressed','true');
+    var f=b.dataset.f;
+    document.querySelectorAll('#venList .ven').forEach(function(v){
+      var show=f==='all'||v.dataset.cat===f;
+      v.style.display=show?'':'none';
+    });
+  });});
+  var venues=[
+    {n:'Capulet',s:'con',fb:{200:25000,220:26000}},
+    {n:'The Josephine',s:'top',fb:{200:39000,220:42000}},
+    {n:'NOPSI (Krauss)',s:'con',fb:{200:62000,220:67000}},
+    {n:'Peter & Paul',s:'con',fb:{200:67000,220:73000}},
+    {n:'Gallery by Pigeon',s:'faint',fb:{200:17600,220:19400},note:'placeholder'}
+  ];
+  var guests=200,scope='fb',SHARED=75000;
+  var barsEl=document.getElementById('bars');
+  function val(v){return scope==='all'?v.fb[guests]+SHARED:v.fb[guests];}
+  function render(){
+    var rows=venues.slice().sort(function(a,b){return val(a)-val(b);});
+    var max=Math.max.apply(null,rows.map(val));
+    barsEl.innerHTML='';
+    rows.forEach(function(v){
+      var value=val(v),pct=Math.round(value/max*100);
+      var row=document.createElement('div');row.className='bar-row';
+      var fillClass='bar-fill'+(v.s==='top'?' top':'')+(v.s==='faint'?' faint':'')+(pct>55?' wide':'');
+      row.innerHTML='<div class="bar-lab">'+v.n+(v.note?'<small>'+v.note+'</small>':'')+'</div>'+
+        '<div class="bar-track"><div class="'+fillClass+'" style="width:'+pct+'%"></div>'+
+        '<div class="bar-val">$'+Math.round(value/1000)+'k</div></div>';
+      barsEl.appendChild(row);
+      requestAnimationFrame(function(){});
+    });
+  }
+  document.querySelectorAll('#segGuests button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('#segGuests button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+    b.setAttribute('aria-pressed','true');guests=+b.dataset.g;render();
+  });});
+  document.querySelectorAll('#segScope button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('#segScope button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+    b.setAttribute('aria-pressed','true');scope=b.dataset.s;render();
+  });});
+  render();
+  document.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(e){
+    var t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+  });});
+})();
+</script></body>
 </html>

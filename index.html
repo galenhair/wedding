@@ -64,7 +64,7 @@
   section:nth-of-type(even){background:var(--paper)}
   .sec-head{text-align:center;margin-bottom:42px}
   .sec-head h2{font-size:clamp(2rem,5vw,2.9rem);margin-top:.15em}
-  .sec-head p{max-width:600px;margin:14px auto 0;color:var(--moss);font-size:1.02rem}
+  .sec-head p{max-width:640px;margin:14px auto 0;color:var(--moss);font-size:1.02rem}
 
   .lede{font-size:1.18rem;text-align:center;max-width:680px;margin:0 auto;color:var(--moss)}
   .lede em{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:var(--ink)}
@@ -82,7 +82,7 @@
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:8px}
   .card{
     background:var(--paper);border:1px solid var(--line);border-radius:16px;
-    padding:30px 28px;box-shadow:var(--shadow);position:relative;
+    padding:30px 28px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;
   }
   .card .badge{
     position:absolute;top:-13px;left:28px;background:var(--gold);color:#fff;
@@ -100,7 +100,31 @@
     font-size:.9rem;color:var(--ink);
   }
   .price .tag{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--gold);font-weight:600;display:block;margin-bottom:2px}
-  .price small{color:var(--moss);font-size:.82rem}
+  .price small{color:var(--moss);font-size:.82rem;display:block;margin-top:3px}
+
+  /* pricing tables */
+  .ptable{width:100%;border-collapse:collapse;margin-top:6px;font-size:.92rem;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .ptable caption{caption-side:top;text-align:left;font-family:'Cormorant Garamond',serif;font-size:1.35rem;color:var(--ink);margin-bottom:10px;font-weight:600}
+  .ptable th,.ptable td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line)}
+  .ptable thead th{background:#efe7d6;color:var(--ink);font-weight:500;letter-spacing:.03em;font-size:.8rem;text-transform:uppercase}
+  .ptable tbody tr:last-child td{border-bottom:none}
+  .ptable td.num,.ptable th.num{text-align:right;white-space:nowrap}
+  .ptable .win{color:var(--gold);font-weight:600}
+  .ptable tr.total td{background:#f3edde;font-weight:500}
+  .ptable .g{font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--gold);font-weight:600}
+  .tnote{font-size:.82rem;color:var(--moss);margin-top:10px;line-height:1.55}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  /* callout / lever */
+  .callout{
+    background:linear-gradient(160deg,#24382f,#2f4a3d);color:var(--cream);
+    border-radius:16px;padding:26px 28px;margin-top:30px;box-shadow:var(--shadow);
+  }
+  .callout .eyebrow{color:var(--gold-soft);margin-bottom:8px}
+  .callout h3{font-size:1.5rem;color:#fff;margin-bottom:8px}
+  .callout p{font-size:.98rem;opacity:.92;margin-bottom:10px}
+  .callout p:last-child{margin-bottom:0}
+  .callout b{color:var(--gold-soft);font-weight:500}
 
   /* experience timeline */
   .timeline{max-width:720px;margin:0 auto;position:relative}
@@ -127,13 +151,15 @@
   .extra{text-align:center;padding:24px 16px;background:var(--paper);border:1px solid var(--line);border-radius:14px}
   .extra .ic{font-size:1.7rem;margin-bottom:10px}
   .extra h4{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:600;margin-bottom:5px}
+  .extra .cost{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
   .extra p{font-size:.88rem;color:var(--moss)}
 
   /* status */
-  .status{max-width:640px;margin:0 auto;text-align:center}
+  .status{max-width:680px;margin:0 auto;text-align:center}
   .status ul{list-style:none;margin-top:22px;text-align:left;display:inline-block}
   .status li{padding-left:26px;position:relative;margin-bottom:11px;font-size:.98rem;color:var(--moss)}
   .status li:before{content:"○";position:absolute;left:0;color:var(--gold);top:0}
+  .status li b{color:var(--ink);font-weight:500}
 
   footer{background:#20302b;color:var(--cream);text-align:center;padding:46px 22px}
   footer .amp{font-style:italic;color:var(--gold-soft)}
@@ -149,6 +175,7 @@
     .beat .time{width:48px;font-size:1rem}
     .beat:before{left:54px}
     section{padding:50px 0}
+    .ptable th,.ptable td{padding:9px 10px;font-size:.86rem}
   }
 </style>
 </head>
@@ -210,8 +237,8 @@
           <li>In-house catering, event team &amp; security</li>
         </ul>
         <div class="price">
-          <span class="tag">~$40k</span>
-          <small>venue + food + bar for ~200 (Fri, Apr 2 2027 proposal in hand). Roughly $120–130 per guest all-in.</small>
+          <span class="tag">~$37–40k</span>
+          <small>venue + food + bar for ~200. Official proposal in hand: $39,775 build (Fri, Apr 2 2027), 23% service + 10.75% F&amp;B tax, $7k rental / $10k F&amp;B min. Roughly $185–200/guest on venue+F&amp;B.</small>
         </div>
       </div>
 
@@ -222,18 +249,100 @@
         <p>A grand historic hotel downtown with in-house everything and rooftop views. Its superpower: guests are
            <em>already home</em> — they ride an elevator, not a rideshare, at the end of the night.</p>
         <ul>
-          <li>Everyone stays on-site — walk-home convenience</li>
+          <li>Everyone stays on-site — walk-home convenience (216 rooms)</li>
           <li>Second line flows naturally right out into the CBD</li>
-          <li>Hotel provides tables, dance floor, stage &amp; lighting</li>
-          <li>Our contact offered to "match just about anything"</li>
+          <li>Hotel provides tables, dance floor, stage &amp; lighting (lighting hinted free)</li>
+          <li>Tara (our contact) offered to "match just about anything"</li>
         </ul>
         <div class="price">
-          <span class="tag">$145–$225<small> / guest</small></span>
-          <small>reception packages by tier (the richer tiers add hot stations + a late-night snack). Chairs to be swapped — Amanda's call.</small>
+          <span class="tag">~$48k <small style="display:inline;font-size:.82rem">base proposal (220)</small></span>
+          <small>Actual quote on the table: $48,168 for 220, tax incl., 3-hr open bar — the <b>lightest</b> food tier. Stepping up to Krauss ($182/pp) → ~$62k or Maison Blanche ($225/pp) → ~$74k is the real swing. Amanda's chair swap on top.</small>
         </div>
       </div>
 
     </div>
+
+    <div class="callout">
+      <div class="eyebrow">The negotiation lever</div>
+      <h3>NOPSI can very plausibly land near Josephine's number</h3>
+      <p>NOPSI's base proposal already lands it within <b>~$8–12k of Josephine</b>, not the $22–34k above that the first model assumed. And on top of that, <b>Tara said she'd match nearly anything.</b></p>
+      <p>The play: pick the package tier we actually want (likely <b>Krauss</b>, for "nobody leaves hungry"), get Josephine's number in writing, then ask Tara to match it. If she does, NOPSI drops toward ~$117k all-in while keeping the hotel/convenience edge.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE NUMBERS -->
+<section id="numbers">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Real Numbers</div>
+      <h2>What it actually costs</h2>
+      <p>No hard budget ceiling — we're optimizing for experience and value. These are decision-grade estimates
+         (±5–10%), not final quotes. ✅ = from a real proposal · modeled figures noted.</p>
+    </div>
+
+    <div class="scroll">
+      <table class="ptable">
+        <caption>Venue + food + bar, all-in (ceremony + ~4-hr reception, ~200 guests)</caption>
+        <thead>
+          <tr><th>Venue</th><th class="num">~200 guests</th><th>Firm?</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Capulet</b> (Fri, Standard)</td><td class="num win">~$23–26k</td><td>✅</td><td>Lowest. Base menu $38/hd — real menu likely $45–60/hd.</td></tr>
+          <tr><td><b>The Josephine</b> (Fri)</td><td class="num win">~$37–40k</td><td>✅</td><td>Proposal $39,775 + ceremony drink + dome projection.</td></tr>
+          <tr><td><b>NOPSI</b> — base (actual proposal)</td><td class="num">~$44–48k</td><td>✅</td><td>Real quote (220 ppl, 3-hr bar, tax incl.). Lightest food tier.</td></tr>
+          <tr><td><b>NOPSI</b> — Krauss $182 (modeled)</td><td class="num">~$62k</td><td>~</td><td>Upgraded for "nobody leaves hungry." + chair swap.</td></tr>
+          <tr><td><b>NOPSI</b> — Maison Blanche $225 (modeled)</td><td class="num">~$74k</td><td>~</td><td>Richest tier — but treat as negotiable (Tara).</td></tr>
+          <tr><td><b>Hotel Peter &amp; Paul</b> (Fri)</td><td class="num">~$67k</td><td>—</td><td>Confirms "expensive." 85 dB cap may gate a live band.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Venue figures cover venue + food + bar + venue-specific essentials only (ceremony drink, Josephine projection, NOPSI chair swap). Shared vendors are a separate block below.</p>
+
+    <div class="scroll" style="margin-top:34px">
+      <table class="ptable">
+        <caption>Shared vendors &amp; enhancements (roughly the same at any venue)</caption>
+        <thead><tr><th>Item</th><th class="num">Estimate</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>Full-service planner</td><td class="num">$12,000</td><td>Locked</td></tr>
+          <tr><td>Florals / candles / vases</td><td class="num">$10,000</td><td>Amanda's list (range $7.5–12k)</td></tr>
+          <tr><td>Live band (7–10 pc)</td><td class="num">$9,000</td><td>Brings own sound</td></tr>
+          <tr><td>Photography + video</td><td class="num">$8,500</td><td>Venue "complimentary photo" = permission only</td></tr>
+          <tr><td>Attire (both + alterations)</td><td class="num">$6,000</td><td>Set by us</td></tr>
+          <tr><td>Rehearsal dinner (~50)</td><td class="num">$5,000</td><td></td></tr>
+          <tr><td>Second line (base → loaded)</td><td class="num">$3.2–8k</td><td>Priced many ways below</td></tr>
+          <tr><td>Welcome gathering</td><td class="num">$3,000</td><td>Travel-heavy crowd</td></tr>
+          <tr><td>Hair &amp; makeup</td><td class="num">$2,500</td><td></td></tr>
+          <tr><td>Transport / shuttle / valet</td><td class="num">$1.5–3k</td><td>Higher at Josephine (guest shuttle)</td></tr>
+          <tr><td>Ceremony musicians</td><td class="num">$1,200</td><td></td></tr>
+          <tr><td>Wedding cake</td><td class="num">$1,200</td><td></td></tr>
+          <tr><td>Stationery</td><td class="num">$1,800</td><td></td></tr>
+          <tr><td>Aerialist</td><td class="num">~$1,000</td><td>If the room allows rigging</td></tr>
+          <tr><td>Voice/audio guest book</td><td class="num">~$600</td><td>Rotary phone</td></tr>
+          <tr><td>Officiant</td><td class="num">$600</td><td></td></tr>
+          <tr><td>Glow / light-up giveaways</td><td class="num">~$500</td><td>End-of-night finish</td></tr>
+          <tr><td>Photo booth</td><td class="num">$0–1,000</td><td>Likely covered by Galen's firm</td></tr>
+          <tr><td>Meals + insurance + gratuities + buffer</td><td class="num">~$6,450</td><td></td></tr>
+          <tr class="total"><td><b>Shared block subtotal</b></td><td class="num g">~$74–85k</td><td>Roughly venue-independent</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="scroll" style="margin-top:34px">
+      <table class="ptable">
+        <caption>Illustrative grand totals (venue + ~$75k shared block, 200 guests)</caption>
+        <thead><tr><th>Venue</th><th class="num">Venue + F&amp;B</th><th class="num">+ Shared</th><th class="num">Grand total</th></tr></thead>
+        <tbody>
+          <tr><td><b>Capulet</b> (Fri)</td><td class="num">~$25k</td><td class="num">~$75k</td><td class="num g">~$100k</td></tr>
+          <tr><td><b>The Josephine</b> (Fri)</td><td class="num">~$40k</td><td class="num">~$77k</td><td class="num g">~$117k</td></tr>
+          <tr><td><b>NOPSI</b> — base (proposal, 220)</td><td class="num">~$48k</td><td class="num">~$73k</td><td class="num g">~$121k</td></tr>
+          <tr><td><b>NOPSI</b> — Krauss (modeled)</td><td class="num">~$62k</td><td class="num">~$73k</td><td class="num g">~$135k</td></tr>
+          <tr><td><b>Peter &amp; Paul</b> (Fri)</td><td class="num">~$67k</td><td class="num">~$75k</td><td class="num g">~$142k</td></tr>
+          <tr><td><b>NOPSI</b> — Maison (modeled)</td><td class="num">~$74k</td><td class="num">~$73k</td><td class="num g">~$147k</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Josephine's shared block runs slightly higher (guest shuttle to solve the off-site problem) and its second line is geographically awkward from Uptown. If Tara price-matches, NOPSI drops toward Josephine's ~$117k while keeping the hotel advantage — which is why these two are the finalists.</p>
   </div>
 </section>
 
@@ -243,19 +352,20 @@
     <div class="sec-head">
       <div class="eyebrow">A Night at The Josephine</div>
       <h2>How the evening would flow</h2>
-      <p>Picture the whole night, start to finish — the piece that turns a beautiful room into an easy, effortless celebration.</p>
+      <p>The Josephine's one open question is that it isn't attached to a hotel. The fix: block one anchor hotel
+         downtown and run a shuttle loop — so guests gather at a bar, ride to a stunning church, and ride home. Here's the whole night.</p>
     </div>
     <div class="timeline">
       <div class="beat">
         <div class="time">Aft.</div>
         <h4>Gather at the hotel</h4>
         <p>Out-of-town guests are all blocked in one downtown hotel — a shared basecamp. Meet at the lobby bar,
-           then a chartered shuttle carries everyone to the door. No one hunts for a ride.</p>
+           then a chartered shuttle carries everyone to the door. No one hunts for a ride. Amanda preps in the Josephine Suite <em>(confirming availability)</em>.</p>
       </div>
       <div class="beat">
         <div class="time">6:30</div>
         <h4>Arrival &amp; the ceremony drink</h4>
-        <p>Guests step off the shuttle onto oak-lined Napoleon Ave into the courtyard. A cocktail is waiting —
+        <p>Guests step off the shuttle onto oak-lined Napoleon Ave into the South Courtyard. A cocktail is waiting —
            served from a rented center bar wrapped in a floral "tree," the visual centerpiece of the entrance.</p>
       </div>
       <div class="beat">
@@ -273,13 +383,13 @@
         <div class="time">8:00</div>
         <h4>The reveal — the Main Hall</h4>
         <p>Doors open to the former sanctuary. The dome lights up with projection mapping, the band takes the stage,
-           and the dance floor is front and center. Stations and grazing all night — a party, not a sit-down.</p>
+           and the dance floor is front and center. Stations and grazing all night — a party, not a sit-down (only ~30–40% seated).</p>
       </div>
       <div class="beat">
         <div class="time">Late</div>
         <h4>Second line &amp; the ride home</h4>
-        <p>A brass-led second line loops the courtyards for the send-off energy, glow handouts for the finish —
-           then the shuttle loops everyone back to the hotel bar for the after-party.</p>
+        <p>A brass-led second line — from Uptown it's a <em>contained</em> loop around the courtyards/block rather than a
+           neighborhood parade — glow handouts for the finish, then the shuttle loops everyone back to the hotel bar for the after-party.</p>
       </div>
     </div>
   </div>
@@ -291,15 +401,15 @@
     <div class="sec-head">
       <div class="eyebrow">Also In the Mix</div>
       <h2>The other contenders</h2>
-      <p>Still gathering info on a few — the field beyond the top two.</p>
+      <p>The field beyond the top two — some still gathering info, some already ruled out.</p>
     </div>
     <div class="grid-min">
-      <div class="mini"><h4>Capulet</h4><div class="st">Contender · best value</div><p>Bywater. The most budget-friendly of the serious options — "absolutely a contender if the price is right."</p></div>
-      <div class="mini"><h4>Common House</h4><div class="st">Contender · toured</div><p>420 Julia. Toured and liked; waiting on a full pricing packet and menu.</p></div>
-      <div class="mini"><h4>Hotel Peter &amp; Paul</h4><div class="st">Contender · likely premium</div><p>Marigny. Beautiful — but the sense is it runs expensive. Awaiting a real quote.</p></div>
-      <div class="mini"><h4>Gallery by Pigeon</h4><div class="st">Awaiting menu</div><p>Caterer-model space (no rental fee, food minimum only). Need a real sample menu.</p></div>
-      <div class="mini"><h4>Venusian Garden</h4><div class="st">Touring soon</div><p>New management; expected to be affordable but bring-your-own everything.</p></div>
-      <div class="mini"><h4>… and the rest</h4><div class="st">Ruled out</div><p>A dozen more toured or contacted — too small, too pricey, or just not us.</p></div>
+      <div class="mini"><h4>Capulet</h4><div class="st">Contender · best value (~$25k)</div><p>Bywater. Lowest venue+F&amp;B of the serious options — "absolutely a contender if the price is right," but not top two.</p></div>
+      <div class="mini"><h4>Common House</h4><div class="st">Contender · toured</div><p>420 Julia. Toured and liked; waiting on a full pricing packet and menu. 175-seat ceremony cap vs our 200.</p></div>
+      <div class="mini"><h4>Hotel Peter &amp; Paul</h4><div class="st">Contender · ~$142k, likely gated</div><p>Marigny. Beautiful — but expensive, and an 85 dB sound cap + hard 10 PM stop may not fit a live band + second line.</p></div>
+      <div class="mini"><h4>Gallery by Pigeon</h4><div class="st">Awaiting menu</div><p>Caterer-model space (no rental fee, food minimum only). $88/pp placeholder; need a real sample menu.</p></div>
+      <div class="mini"><h4>Venusian Garden</h4><div class="st">Touring 7/12</div><p>New management; expected cheap but bring-your-own everything (catering, bar, rentals) → hidden costs.</p></div>
+      <div class="mini"><h4>… and the rest</h4><div class="st">Out or silent</div><p>Treme Market Branch, NOMA, Pontchartrain, Chicory, Il Mercato ruled out; The Mint, Ogden, Elms, Civic, Orpheum, Marigny Opera House never replied.</p></div>
     </div>
   </div>
 </section>
@@ -310,19 +420,44 @@
     <div class="sec-head">
       <div class="eyebrow">The Fun Stuff</div>
       <h2>Extras we're dreaming up</h2>
-      <p>The touches that make it ours — some locked, some being priced.</p>
+      <p>The touches that make it ours — with rough numbers to refine against real quotes.</p>
     </div>
     <div class="extras">
-      <div class="extra"><div class="ic">🍸</div><h4>Ceremony Drink</h4><p>A cocktail in hand before you sit — poured from a floral-wrapped center bar.</p></div>
-      <div class="extra"><div class="ic">✨</div><h4>Projection Mapping</h4><p>The dome (and maybe the altar wall) lit up and moving above the dance floor.</p></div>
-      <div class="extra"><div class="ic">🎺</div><h4>Second Line</h4><p>Brass band, parasols &amp; handkerchiefs — maybe Mardi Gras Indians and pedicabs.</p></div>
-      <div class="extra"><div class="ic">🎪</div><h4>Aerialist</h4><p>An overhead performer, if the room allows the rigging.</p></div>
-      <div class="extra"><div class="ic">💐</div><h4>Florals &amp; Candles</h4><p>Flowers, candlelight and vases throughout — warm and abundant.</p></div>
-      <div class="extra"><div class="ic">🎶</div><h4>Live Band</h4><p>A 7–10 piece band keeping the floor full all night long.</p></div>
-      <div class="extra"><div class="ic">📞</div><h4>Audio Guest Book</h4><p>An old rotary phone — leave a voice message for us to keep.</p></div>
-      <div class="extra"><div class="ic">📸</div><h4>Photo Booth</h4><p>A backdrop and props for the night's silliest photos.</p></div>
-      <div class="extra"><div class="ic">💡</div><h4>Glow Finish</h4><p>Light-up handouts as the night peaks — a rave send-off.</p></div>
+      <div class="extra"><div class="ic">🍸</div><h4>Ceremony Drink</h4><div class="cost">$3.50–6/guest + ~$1.5k bar</div><p>A cocktail in hand before you sit — poured from a floral-wrapped center bar.</p></div>
+      <div class="extra"><div class="ic">✨</div><h4>Projection Mapping</h4><div class="cost">Dome ~$1.2k · altar +$1.5k</div><p>The dome (and maybe the altar wall) lit up and moving above the dance floor.</p></div>
+      <div class="extra"><div class="ic">🎺</div><h4>Second Line</h4><div class="cost">~$3.2k → $6–8k loaded</div><p>Brass band, parasols &amp; handkerchiefs — maybe Mardi Gras Indians and pedicabs.</p></div>
+      <div class="extra"><div class="ic">🎪</div><h4>Aerialist</h4><div class="cost">~$750–2,000</div><p>An overhead performer, if the room allows the rigging.</p></div>
+      <div class="extra"><div class="ic">💐</div><h4>Florals &amp; Candles</h4><div class="cost">~$7.5–12k</div><p>Flowers, candlelight and vases throughout — warm and abundant.</p></div>
+      <div class="extra"><div class="ic">🎶</div><h4>Live Band</h4><div class="cost">~$9,000</div><p>A 7–10 piece band keeping the floor full all night long.</p></div>
+      <div class="extra"><div class="ic">📞</div><h4>Audio Guest Book</h4><div class="cost">~$450–750</div><p>An old rotary phone — leave a voice message for us to keep.</p></div>
+      <div class="extra"><div class="ic">📸</div><h4>Photo Booth</h4><div class="cost">$0–1,200 (firm's?)</div><p>A backdrop and props for the night's silliest photos.</p></div>
+      <div class="extra"><div class="ic">💡</div><h4>Glow Finish</h4><div class="cost">$1–5/guest</div><p>Light-up handouts as the night peaks — a rave send-off.</p></div>
     </div>
+  </div>
+</section>
+
+<!-- SECOND LINE MENU -->
+<section id="secondline">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Build-Your-Own</div>
+      <h2>The second line, priced every way</h2>
+      <p>A base parade plus stackable add-ons, so we can see the full range before we pick.</p>
+    </div>
+    <div class="scroll">
+      <table class="ptable">
+        <thead><tr><th>Component</th><th class="num">Rough cost</th></tr></thead>
+        <tbody>
+          <tr><td>Base: permit (~$200) + NOPD escort (~$400–700) + walking brass band ($1,500–3,000) + parasols/handkerchiefs</td><td class="num">~$2.5–4k</td></tr>
+          <tr><td>+ Mardi Gras Indians appearance</td><td class="num">~$1,000–3,000+</td></tr>
+          <tr><td>+ Pedicabs for elderly guests</td><td class="num">~$300–800</td></tr>
+          <tr><td>+ Glow / light-up handouts</td><td class="num">~$200–1,000</td></tr>
+          <tr><td>+ Extra fun (dancers, bigger band, second brass band)</td><td class="num">variable</td></tr>
+          <tr class="total"><td><b>Range</b></td><td class="num g">lean ~$2.5k → loaded ~$6–8k+</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Flows naturally from CBD (NOPSI) / Marigny / Bywater; awkward from Uptown (Josephine) → a contained-loop version, factored into the experience map above.</p>
   </div>
 </section>
 
@@ -334,10 +469,12 @@
       <h2>Still to decide together</h2>
     </div>
     <ul>
-      <li>The venue — Josephine or NOPSI (the big one)</li>
-      <li>The date — targeting a Friday in early April 2027</li>
-      <li>Which NOPSI package tier, or locking Josephine's proposal</li>
-      <li>Band, florals, photographer &amp; the second-line lineup</li>
+      <li><b>The venue</b> — Josephine or NOPSI (the big one)</li>
+      <li><b>The date</b> — Josephine's proposal is dated Fri Apr 2, 2027; confirm the real target (P&amp;P Apr 16 · NOPSI Apr 17 also floated)</li>
+      <li><b>NOPSI package tier</b> — likely Krauss ($182) — then have Tara match Josephine's number</li>
+      <li><b>Josephine details</b> — confirm the $5k Friday rental rate in writing + the Suite for Amanda's prep</li>
+      <li><b>Band, florals, photographer</b> &amp; the second-line lineup</li>
+      <li><b>Still pricing</b> — Peter &amp; Paul real quote, Gallery by Pigeon menu, Venusian Garden tour (7/12), Capulet's real menu</li>
     </ul>
   </div>
 </section>
